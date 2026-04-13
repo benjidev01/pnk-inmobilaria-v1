@@ -1,0 +1,496 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #003366;
+}
+
+/* Header */
+header {
+    background-color: #004080;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Formularios (Registrar Propietario, Gestor, Login) */
+.form-card {
+    background: #fff;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-logo {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.form-card h2 {
+    color: #003366;
+    margin: 0;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-card label {
+    font-weight: bold;
+    color: #003366;
+}
+
+.form-card input,
+.form-card select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.form-card button {
+    padding: 14px;
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.form-card button:hover {
+    background-color: #004c99;
+}
+
+/* Cards de propiedades */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #003366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card a:hover {
+    background: #004c99;
+}
+
+/* Galería de imágenes en detalle propiedad */
+.galeria-propiedad {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.galeria-propiedad img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.galeria-propiedad img:hover {
+    transform: scale(1.1);
+    border-color: #004080;
+}
+
+/* Detalle de propiedad */
+.detalle-propiedad {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.detalle-propiedad img {
+    max-width: 80%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* === Registro Propietario === */
+.registro-propietario {
+    background-color: #f9f9fb; /* fondo suave */
+    border: 2px solid #ee3366; /* color corporativo */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.registro-propietario h2 {
+    color: #ee3366;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.registro-propietario label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+.registro-propietario input,
+.registro-propietario select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.registro-propietario input:focus,
+.registro-propietario select:focus {
+    border-color: #ee3366;
+    outline: none;
+}
+
+.registro-propietario button {
+    background-color: #ee3366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.registro-propietario button:hover {
+    background-color: #d12e5b;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+  gap: 12px; /* espacio entre imagen y texto */
+}
+
+.logo-img {
+  width: 50px;   /* tamaño razonable del logo */
+  height: 50px;  /* cuadrado proporcional */
+    object-fit: cover;
+  border-radius: 6px; /* bordes redondeados para que se vea más bonito */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* sombra ligera */
+}
+
+.logo-text {
+  font-size: 2rem;   /* letras grandes */
+  color: #fff;       /* color blanco */
+    margin: 0;
+}
+
+header {
+    background-color: #004080;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo-text {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Títulos principales */
+h1, h2 {
+  color: #004080;          /* azul oscuro corporativo */
+  font-size: 2.2rem;       /* más grande */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+h3 {
+  color: #cc3300;          /* acento naranja para destacar */
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Texto general */
+p, label, li {
+  color: #222;             /* gris muy oscuro para contraste */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Enlaces especiales (ej: Volver) */
+a {
+  color: #800080;          /* púrpura llamativo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+  color: #660066;          /* púrpura más oscuro al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Sección de detalle propiedad */
+.detalle-propiedad {
+    background: #ffffff;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 85%;
+    box-shadow: 0 4px 12px rgba(130, 68, 68, 0.15);
+}
+
+/* Galería de imágenes */
+.galeria-propiedad h3 {
+    text-align: center;
+  color: #004080;          /* azul corporativo */
+    margin-bottom: 15px;
+}
+
+/* Títulos principales */
+h1, h2 {
+  color: #00264d;          /* azul marino intenso */
+  font-size: 2.4rem;       /* más grande */
+  font-weight: 800;        /* muy marcado */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Subtítulos */
+h3 {
+  color: #d62828;          /* rojo intenso para destacar */
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Texto general */
+p, label, li {
+  color: #111;             /* casi negro para máximo contraste */
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Enlaces especiales (ej: Volver) */
+a {
+  color: #ff6600;          /* naranja vivo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+  color: #cc5200;          /* naranja más oscuro al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Sección de detalle propiedad */
+.detalle-propiedad {
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 85%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Galería de imágenes */
+.galeria-propiedad h3 {
+    text-align: center;
+  color: #004080;          /* azul corporativo */
+    margin-bottom: 15px;
+}
+
+.contactos {
+    background: #fff;
+    padding: 25px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 85%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.contactos h2 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+.redes-sociales {
+    display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  flex-wrap: wrap;           /* permite que bajen si no caben */
+  gap: 15px;                 /* espacio entre botones */
+    margin-top: 15px;
+}
+
+.redes-sociales a {
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.redes-sociales a.facebook {
+  background: #3b5998; /* azul Facebook */
+}
+
+.redes-sociales a.instagram {
+  background: #e4405f; /* rosa Instagram */
+}
+
+.redes-sociales a.whatsapp {
+  background: #25d366; /* verde WhatsApp */
+}
+
+.redes-sociales a[href^="mailto"] {
+  background: #ff6600; /* naranja para email */
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
